@@ -12,9 +12,9 @@ import java.beans.PropertyVetoException;
 // config mybatis mapper scan
 @MapperScan("com.example.demo.dao")
 public class DataSourceConfiguration {
-    @Value("${jdbc.driver}")
+    @Value("com.mysql.cj.jdbc.Driver")
     private String jdbcDriver;
-    @Value("${jdbc.url}")
+    @Value("${jdbc.url}&serverTimezone=UTC")
     private String jdbcUrl;
     @Value("${jdbc.username}")
     private String jdbcUsername;
